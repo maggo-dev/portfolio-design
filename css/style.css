@@ -94,6 +94,7 @@ nav.scrolled {
   text-decoration: none;
   color: var(--ink);
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 .nav-links {
   display: flex;
@@ -109,6 +110,7 @@ nav.scrolled {
   text-decoration: none;
   transition: color 0.2s;
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 .nav-links a:hover {
   color: var(--ink);
@@ -123,8 +125,8 @@ nav.scrolled {
   color: var(--ink-2);
 }
 .avail-dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #22c55e;
   flex-shrink: 0;
@@ -177,6 +179,7 @@ nav.scrolled {
   letter-spacing: -0.04em;
   color: var(--ink-3);
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 .hero-title em {
   font-style: italic;
