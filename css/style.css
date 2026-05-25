@@ -1,5 +1,3 @@
-*,
-*::before,
 *::after {
   margin: 0;
   padding: 0;
@@ -8,7 +6,6 @@
 :root {
   --bg: #f8f6f1;
   --ink: #111110;
-  --ink-1: #fd3738;
   --ink-2: #6b6b67;
   --ink-3: #b5b3ac;
   --ink-4: #c9c9c9;
@@ -32,14 +29,16 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   cursor: none;
+  text-transform: uppercase;
 }
-
+body p {
+  text-transform: none;
+}
 body.case-page {
   text-transform: uppercase;
 }
 
-body.case-page p,
-body.case-page p * {
+body.case-page p {
   text-transform: none;
 }
 
@@ -50,12 +49,11 @@ body.case-page p * {
   background: var(--ink);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 9999;
   transform: translate(-50%, -50%);
   transition:
     width 0.25s,
     height 0.25s;
-  will-change: transform;
 }
 #cur.big {
   width: 48px;
@@ -73,7 +71,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 500;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,18 +92,8 @@ nav.scrolled {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-decoration: none;
-  color: var(--ink-3);
+  color: var(--ink);
   text-transform: uppercase;
-  display: inline-block;
-  transition:
-    color 0.2s,
-    transform 0.2s;
-  cursor: pointer;
-}
-.nav-name:hover,
-.nav-name:focus {
-  color: var(--ink-2);
-  transform: translateX(2px);
 }
 .nav-links {
   display: flex;
@@ -119,51 +107,11 @@ nav.scrolled {
   letter-spacing: 0.04em;
   color: var(--ink-2);
   text-decoration: none;
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  transition: color 0.2s;
   text-transform: uppercase;
-  mix-blend-mode: difference;
-  cursor: pointer;
 }
-.nav-links a:hover,
-.nav-links a:focus {
-  color: var(--ink-4);
-  transform: translateY(-2px);
-}
-.cta-bt {
-  position: relative;
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  text-decoration: none;
-  color: var(--ink-1);
-  transition:
-    color 0.2s,
-    transform 0.2s;
-  cursor: pointer;
-}
-.cta-bt::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  width: 10%;
-  height: 4px;
-  background: var(--ink-1);
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  transition:
-    transform 360ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    opacity 160ms;
-  opacity: 0.55;
-}
-.cta-bt:hover,
-.cta-bt:focus {
-  color: var(--ink-1);
-}
-.cta-bt:hover::after,
-.cta-bt:focus::after {
-  transform: translateX(-50%) scaleX(1);
+.nav-links a:hover {
+  color: var(--ink);
 }
 .nav-avail {
   display: flex;
@@ -175,12 +123,11 @@ nav.scrolled {
   color: var(--ink-2);
 }
 .avail-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #22c55e;
   flex-shrink: 0;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.14, 1) infinite;
 }
 
 #hero {
@@ -207,13 +154,11 @@ nav.scrolled {
 .hero-location {
   font-size: 11px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--ink-3);
 }
 .hero-avail {
   font-size: 11px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-2);
   display: flex;
   align-items: center;
@@ -229,8 +174,6 @@ nav.scrolled {
   line-height: 0.97;
   letter-spacing: -0.04em;
   color: var(--ink-3);
-  text-transform: uppercase;
-  mix-blend-mode: difference;
 }
 .hero-title em {
   font-style: italic;
@@ -270,7 +213,6 @@ nav.scrolled {
   align-items: center;
   gap: 0.5rem;
   transition: color 0.2s;
-  text-transform: uppercase;
 }
 .hero-link:hover {
   color: var(--ink-4);
@@ -292,7 +234,6 @@ nav.scrolled {
 .hero-scroll {
   font-size: 11px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--ink-3);
   display: flex;
   align-items: center;
@@ -316,7 +257,6 @@ nav.scrolled {
   border: 1px solid var(--line-2);
   padding: 0.25rem 0.75rem;
   color: var(--ink-3);
-  text-transform: uppercase;
 }
 
 .div-rule {
@@ -333,7 +273,6 @@ nav.scrolled {
 .sec-label {
   font-size: 11px;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--ink-3);
   padding: 5rem 0 3rem;
   display: flex;
@@ -364,7 +303,6 @@ nav.scrolled {
   letter-spacing: -0.03em;
   color: var(--ink);
   margin-bottom: 2rem;
-  text-transform: uppercase;
 }
 .sobre-body {
   font-size: 14px;
@@ -400,7 +338,6 @@ nav.scrolled {
 .stat-l {
   font-size: 11px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-3);
 }
 
@@ -421,8 +358,6 @@ nav.scrolled {
   text-decoration: none;
   color: inherit;
   position: relative;
-  cursor: pointer;
-  transition: transform 0.2s;
 }
 .proj-item:last-child {
   border-bottom: 1px solid var(--line);
@@ -432,7 +367,6 @@ nav.scrolled {
   letter-spacing: 0.06em;
   color: var(--ink-3);
   padding-top: 0.3rem;
-  text-transform: uppercase;
 }
 .proj-meta {
   display: flex;
@@ -443,13 +377,11 @@ nav.scrolled {
 .proj-cat {
   font-size: 11px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-3);
 }
 .proj-year {
   font-size: 11px;
   color: var(--ink-3);
-  text-transform: uppercase;
 }
 .proj-name {
   font-family: 'Inter', sans-serif;
@@ -462,7 +394,6 @@ nav.scrolled {
   transition:
     font-style 0.3s,
     font-weight 0.3s;
-  text-transform: uppercase;
 }
 .proj-item:hover .proj-name {
   font-style: italic;
@@ -487,7 +418,6 @@ nav.scrolled {
   letter-spacing: 0.04em;
   color: var(--ink-3);
   text-align: right;
-  text-transform: uppercase;
 }
 .proj-metric strong {
   display: block;
@@ -519,14 +449,13 @@ nav.scrolled {
   height: 190px;
   background: var(--ink);
   pointer-events: none;
-  z-index: 400;
+  z-index: 50;
   opacity: 0;
   transition: opacity 0.25s;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: opacity;
 }
 .proj-preview.show {
   opacity: 1;
@@ -559,7 +488,6 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  text-transform: uppercase;
 }
 .marquee-sep {
   width: 3px;
@@ -574,16 +502,6 @@ nav.scrolled {
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
   }
 }
 
@@ -603,7 +521,6 @@ nav.scrolled {
   font-style: italic;
   letter-spacing: -0.03em;
   line-height: 1.2;
-  text-transform: uppercase;
 }
 .skills-desc {
   font-size: 14px;
@@ -628,7 +545,6 @@ nav.scrolled {
 .skills-table td:first-child {
   font-size: 11px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-3);
   width: 180px;
   padding-right: 2rem;
@@ -649,8 +565,6 @@ nav.scrolled {
   transition: all 0.2s;
   background: transparent;
   font-family: var(--f-mono);
-  text-transform: uppercase;
-  cursor: pointer;
 }
 .skill-pill:hover {
   background: var(--ink);
@@ -665,7 +579,6 @@ nav.scrolled {
 .cta-eyebrow {
   font-size: 11px;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: var(--ink-3);
   margin-bottom: 2.5rem;
 }
@@ -678,7 +591,6 @@ nav.scrolled {
   line-height: 1.05;
   color: var(--ink);
   margin-bottom: 3.5rem;
-  text-transform: uppercase;
 }
 .cta-email {
   font-size: clamp(1rem, 2.2vw, 1.5rem);
@@ -694,10 +606,7 @@ nav.scrolled {
   padding-bottom: 0.5rem;
   transition:
     color 0.2s,
-    border-color 0.2s,
-    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  will-change: transform;
+    border-color 0.2s;
 }
 .cta-email:hover {
   color: var(--ink);
@@ -717,7 +626,6 @@ footer {
   font-size: 11px;
   color: var(--ink-3);
   letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 .footer-links {
   display: flex;
@@ -729,8 +637,6 @@ footer {
   color: var(--ink-3);
   text-decoration: none;
   transition: color 0.2s;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 .footer-links a:hover {
   color: var(--ink);
@@ -764,11 +670,10 @@ footer {
   position: fixed;
   inset: 0;
   background: var(--bg);
-  z-index: 900;
+  z-index: 9997;
   display: flex;
   align-items: flex-end;
   padding: var(--pad);
-  will-change: opacity;
 }
 .loader-bar-wrap {
   flex: 1;
@@ -821,7 +726,6 @@ footer {
   }
 }
 
-/* CASE PAGE */
 body.case-page #loader {
   background: var(--ink);
 }
@@ -899,7 +803,6 @@ body.case-page .loader-n {
 .case-meta-label {
   font-size: 10px;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--ink-3);
 }
 .case-meta-val {
@@ -940,7 +843,7 @@ body.case-page .loader-n {
 .case-hero-col-label {
   font-size: 10px;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color: var(--ink-3);
   margin-bottom: 0.5rem;
 }
@@ -972,7 +875,6 @@ body.case-page .loader-n {
   left: var(--pad);
   font-size: 11px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(248, 246, 241, 0.3);
 }
 
@@ -986,7 +888,6 @@ body.case-page .loader-n {
 .sec-tag {
   font-size: 10px;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: var(--ink-3);
   margin-bottom: 3rem;
   display: flex;
@@ -1142,7 +1043,6 @@ body.case-page .loader-n {
 .step-n {
   font-size: 10px;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--ink-3);
   margin-bottom: 1rem;
 }
@@ -1199,7 +1099,6 @@ body.case-page .loader-n {
   left: 1.5rem;
   font-size: 10px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(248, 246, 241, 0.25);
 }
 
@@ -1230,7 +1129,6 @@ body.case-page .loader-n {
 .resultado-metric-l {
   font-size: 12px;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: var(--ink-3);
 }
 .resultado-metric-desc {
@@ -1300,7 +1198,6 @@ body.case-page .loader-n {
 .next-label {
   font-size: 10px;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
   color: var(--ink-3);
   margin-bottom: 1rem;
 }
