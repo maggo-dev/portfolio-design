@@ -202,8 +202,6 @@ video {
   display: block;
   border-radius: var(--radius-md);
   border: 1px solid var(--grey-10);
-  -webkit-backdrop-filter: blur(14.65px);
-  backdrop-filter: blur(14.65px);
 }
 
 ul,
