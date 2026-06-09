@@ -1,0 +1,4 @@
+# Ignore large GIF files
+*.gif
+# We are ignoring all gifs for now because they were causing size limit issues on GitHub push.
+# If you need specific small gifs, you can force add them with 'git add -f path/to/small.gif'

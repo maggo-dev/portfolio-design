@@ -1,438 +1,390 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,300;1,14..32,400&family=Geist+Mono:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>MAGGO /designer</title>
-  </head>
-  <body>
-    <div id="cur"></div>
 
-    <div id="loader">
-      <span class="loader-n" id="ln">0</span>
-      <div class="loader-bar-wrap">
-        <div class="loader-bar-fill" id="lb"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="theme-color" content="#121317">
+  <title>MAGGO — Creative Digital Designer</title>
+  <meta name="description"
+    content="MAGGO — Designer criativo especializado em Branding, Web Design, UI Design e Editorial. Belo Horizonte, Brasil.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MAGGO — Creative Digital Designer">
+  <meta property="og:description"
+    content="Designer criativo especializado em Branding, Web Design, UI Design e Editorial.">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Fonts: Google Sans Flex & Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,400..500,0..100&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,ROND@8..144,-10..0,25..150,400..500,0..100&display=swap">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@40..48,300,0..1,0,50&display=block">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Google+Symbols:opsz,wght,FILL,GRAD,ROND@40..48,300,0..1,0,50&display=block">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+  <header class="header" id="main-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo-link hover-target" id="logo">
+          <img class="logo-img logo-avatar" src="assets/img/avatars/avatar-site.png" alt="MAGGO avatar" width="48" height="48">
+          <img class="logo-img" src="assets/img/icons/logo_pr_preta.svg" alt="MAGGO" width="175" height="28">
+        </a>
+        <nav class="header-nav" id="header-nav">
+          <a href="#projects" class="nav-link hover-target">Projetos</a>
+          <a href="#about" class="nav-link hover-target">Sobre</a>
+          <a href="#expertise" class="nav-link hover-target">Skills</a>
+          <a href="mailto:falar.mateusgomes@gmail.com" class="nav-link hover-target" id="nav-contact">
+            Contato
+            <span class="symbol" aria-hidden="true">arrow_outward</span>
+          </a>
+        </nav>
+        <button class="menu-toggle hover-target" id="menu-toggle" aria-label="Abrir menu de navegação"
+          aria-expanded="false">menu</button>
       </div>
     </div>
+  </header>
 
-    <div class="proj-preview" id="preview">
-      <div class="proj-preview-inner" id="preview-text">P</div>
-    </div>
+  <main>
 
-    <nav id="nav">
-      <a href="#" class="nav-name">MAGGO /dsgn</a>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#cta-final">Contato</a></li>
-        <li>
-          <span class="nav-avail">
-            <span class="avail-dot"></span>
-            Disponível
-          </span>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="wrap">
-      <section id="hero">
-        <div class="hero-top">
-          <span class="hero-location">Belo Horizonte, BR</span>
-          <span class="hero-avail">
-            <span class="avail-dot"></span>
-            Disponível para projetos
-          </span>
-        </div>
-        <div class="hero-main">
-          <h1 class="hero-title">
-            Creative
-            <br />
-            Digital Designer
-          </h1>
-          <div class="hero-sub">
-            <p class="hero-desc">
-              Movido pela curiosidade e pelo amor ao design, crio experiências
-              digitais simples, funcionais e visualmente impactantes.
-              <strong>
-                Como creator, estou sempre aprendendo e explorando novas ideias.
-              </strong>
-            </p>
-            <div class="hero-links">
-              <a href="#" class="hero-link">
-                Behance
-                <span class="hero-link-arrow">↗</span>
-              </a>
-              <a href="#" class="hero-link">
-                Vimeo
-                <span class="hero-link-arrow">↗</span>
-              </a>
-              <a href="#" class="hero-link">
-                LinkedIn
-                <span class="hero-link-arrow">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="hero-bottom">
-          <span class="hero-scroll">Scroll</span>
-          <div class="hero-tags">
-            <span class="hero-tag">Branding</span>
-            <span class="hero-tag">Web Design</span>
-            <span class="hero-tag">UI Design</span>
-            <span class="hero-tag">Editorial</span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <hr class="div-rule" />
-
-    <div class="marquee-section">
-      <div class="marquee-track">
-        <span class="marquee-item">
-          Branding
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Identidade Visual
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Web Design
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          UI Design
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Design Editorial
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Direção de Arte
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Social Media
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Sistemas Visuais
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Branding
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Identidade Visual
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Web Design
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          UI Design
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Design Editorial
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Direção de Arte
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Social Media
-          <span class="marquee-sep"></span>
-        </span>
-        <span class="marquee-item">
-          Sistemas Visuais
-          <span class="marquee-sep"></span>
-        </span>
+    <!-- ======================================================
+         HERO / WELCOME SECTION
+         ====================================================== -->
+    <section class="welcome-section" id="hero">
+      <div class="welcome-header">
+        <h1 class="welcome-title reveal">
+          <span>Creative Digital Designer</span>
+        </h1>
       </div>
-    </div>
 
-    <section id="sobre">
-      <div class="wrap">
-        <p class="sec-label" data-n="00 —">Sobre</p>
-        <div class="sobre-grid">
-          <div>
-            <h2 class="sobre-title r">
-              Meu foco é
-              <strong>transformar ideias</strong>
-              em sistemas visuais claros, expressivos e memoráveis.
-            </h2>
-            <div class="sobre-body r d1">
-              <p>
-                Trabalho na interseção entre
-                <strong>conceito estratégico e execução visual</strong>
-                . Cada projeto começa com um diagnóstico — o que essa marca
-                precisa comunicar, para quem, e como isso se traduz em forma,
-                cor e tipografia.
-              </p>
-              <p>
-                Com domínio avançado em
-                <strong>Figma, Photoshop e Illustrator</strong>
-                , construo sistemas visuais coerentes — identidades que escalam,
-                interfaces que convertem, editoriais que engajam.
-              </p>
-              <p>
-                Não faço design "bonitinho". Faço design que
-                <strong>cria percepção e move pessoas</strong>
-                .
-              </p>
-            </div>
-          </div>
-          <div class="sobre-stats">
-            <div class="stat-item r">
-              <div class="stat-n">15+</div>
-              <div class="stat-l">Anos de experiência</div>
-            </div>
-            <div class="stat-item r d1">
-              <div class="stat-n">260+</div>
-              <div class="stat-l">Projetos entregues</div>
-            </div>
-            <div class="stat-item r d2">
-              <div class="stat-n">130+</div>
-              <div class="stat-l">Clientes atendidos</div>
-            </div>
-            <div class="stat-item r d3">
-              <div class="stat-n">8</div>
-              <div class="stat-l">Setores de atuação</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="div-rule" />
-
-    <section id="projetos">
-      <div class="wrap">
-        <p class="sec-label" data-n="01 —">Projetos Selecionados</p>
-        <div class="proj-list">
-          <a href="projeto_case.html" class="proj-item r" data-preview="FA">
-            <span class="proj-num">01</span>
-            <div class="proj-body">
-              <div class="proj-meta">
-                <span class="proj-cat">Branding</span>
-                <span class="proj-year">· 2024</span>
-              </div>
-              <h3 class="proj-name">Trattabrasil Cosméticos — Rebranding</h3>
-              <p class="proj-desc">
-                Transformação completa da experiência da marca através de
-                rebranding, redesign de embalagens, identidade digital e
-                comunicação estratégica. Uma nova linguagem visual construída
-                para fazer o público sentir a marca antes mesmo do primeiro
-                contato.
-              </p>
-            </div>
-            <div class="proj-metrics">
-              <div class="proj-metric">
-                <strong>+98% de aprovação do público</strong>
-                Após redesign
-              </div>
-              <div class="proj-metric">
-                <strong>Rotulagem e Sistema visual</strong>
-                Produto, redes sociais, e-commerce
-              </div>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </a>
-
-          <a href="#" class="proj-item r" data-preview="LX">
-            <span class="proj-num">02</span>
-            <div class="proj-body">
-              <div class="proj-meta">
-                <span class="proj-cat">Web Design · UI</span>
-                <span class="proj-year">· 2024</span>
-              </div>
-              <h3 class="proj-name">Luxe Cosmetics — E-commerce Premium</h3>
-              <p class="proj-desc">
-                Redesign completo de e-commerce para marca de cosméticos
-                naturais de luxo. Direção de arte editorial, hierarquia de
-                produto e experiência de checkout premium.
-              </p>
-            </div>
-            <div class="proj-metrics">
-              <div class="proj-metric">
-                <strong>+38% conversão</strong>
-                Após redesign
-              </div>
-              <div class="proj-metric">
-                <strong>Desktop + Mobile</strong>
-                Sistemas responsivos
-              </div>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </a>
-
-          <a href="#" class="proj-item r" data-preview="UM">
-            <span class="proj-num">03</span>
-            <div class="proj-body">
-              <div class="proj-meta">
-                <span class="proj-cat">Design Editorial</span>
-                <span class="proj-year">· 2023</span>
-              </div>
-              <h3 class="proj-name">Urban Magazine — Sistema Editorial</h3>
-              <p class="proj-desc">
-                Sistema editorial completo para revista de cultura urbana. Do
-                grid base ao guia de estilo tipográfico, definindo ritmo visual
-                para 80+ páginas por edição.
-              </p>
-            </div>
-            <div class="proj-metrics">
-              <div class="proj-metric">
-                <strong>80+ páginas</strong>
-                Por edição
-              </div>
-              <div class="proj-metric">
-                <strong>Grid modular</strong>
-                12 colunas
-              </div>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </a>
-
-          <a href="#" class="proj-item r" data-preview="ST">
-            <span class="proj-num">04</span>
-            <div class="proj-body">
-              <div class="proj-meta">
-                <span class="proj-cat">Rebranding Estratégico</span>
-                <span class="proj-year">· 2023</span>
-              </div>
-              <h3 class="proj-name">Strata Ventures — Rebranding</h3>
-              <p class="proj-desc">
-                Reposicionamento visual completo para venture capital em
-                expansão. Autoridade institucional sem perder modernidade —
-                sistema que funciona de pitch deck a outdoor.
-              </p>
-            </div>
-            <div class="proj-metrics">
-              <div class="proj-metric">
-                <strong>Rebranding total</strong>
-                Identidade + colaterais
-              </div>
-              <div class="proj-metric">
-                <strong>Pitch deck + Brand</strong>
-                Sistema aplicado
-              </div>
-            </div>
-            <span class="proj-arrow">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <hr class="div-rule" />
-
-    <section id="skills">
-      <div class="wrap">
-        <p class="sec-label" data-n="02 —">Expertise</p>
-        <div class="skills-intro">
-          <h2 class="skills-title r">Domínio técnico a serviço do conceito.</h2>
-          <p class="skills-desc r d1">
-            Combinando ferramentas avançadas com pensamento estratégico — cada
-            disciplina integrada num processo coerente.
-          </p>
-        </div>
-        <table class="skills-table r">
-          <tr>
-            <td>Identidade</td>
-            <td>
-              <span class="skill-pill">Branding</span>
-              <span class="skill-pill">Identidade Visual</span>
-              <span class="skill-pill">Brand Book</span>
-              <span class="skill-pill">Sistemas Visuais</span>
-              <span class="skill-pill">Naming</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Digital</td>
-            <td>
-              <span class="skill-pill">Web Design</span>
-              <span class="skill-pill">UI Design</span>
-              <span class="skill-pill">UX Básico</span>
-              <span class="skill-pill">Protótipo</span>
-              <span class="skill-pill">Design System</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Editorial</td>
-            <td>
-              <span class="skill-pill">Design Editorial</span>
-              <span class="skill-pill">Grid</span>
-              <span class="skill-pill">Tipografia</span>
-              <span class="skill-pill">Social Media</span>
-              <span class="skill-pill">Campanha</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Direção</td>
-            <td>
-              <span class="skill-pill">Direção de Arte</span>
-              <span class="skill-pill">Storytelling Visual</span>
-              <span class="skill-pill">Design Estratégico</span>
-              <span class="skill-pill">Apresentação</span>
-            </td>
-          </tr>
-          <tr>
-            <td>Ferramentas</td>
-            <td>
-              <span class="skill-pill">Figma ↑</span>
-              <span class="skill-pill">Photoshop ↑</span>
-              <span class="skill-pill">Illustrator ↑</span>
-              <span class="skill-pill">After Effects</span>
-              <span class="skill-pill">Premiere</span>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <hr class="div-rule" />
-
-    <section id="cta-final">
-      <div class="wrap">
-        <p class="cta-eyebrow r">Entrar em contato</p>
-        <h2 class="cta-title r d1">
-          Criandoexperiências
-          <br />
-          memoráveis?
-        </h2>
-        <a href="mailto:hello@studio.com" class="cta-email r d2">
-          ola.mggdev@gmail.com
-          <span>↗</span>
+      <div class="welcome-cta reveal reveal-d1">
+        <a href="#projects" class="button button-primary hover-target">Ver projetos</a>
+        <a href="mailto:falar.mateusgomes@gmail.com" class="button button-secondary hover-target">
+          <span>Envie um oi👋🏿</span>
         </a>
       </div>
+
+
     </section>
 
-    <hr class="div-rule" />
+    <!-- ======================================================
+         PROJECTS SECTION
+         ====================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-main reveal">
+            <h2 class="heading-4">Projetos selecionados</h2>
+          </div>
+          <p class="body-text text-variant reveal reveal-d1">Branding, Web Design, UI Design e Direção Criativa.</p>
+        </div>
+        <!-- Row 2: 2 cards -->
+        <div class="products-grid layout-bottom">
+          <a href="case.html" class="product-card hover-target reveal" id="project-4">
+            <div class="product-card-image">
+              <img src="assets/img/thumbnails/trattabrasil-thumb.jpg" alt="Trattabrasil Cosméticos" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-content">
+              <h3 class="card-title">Trattabrasil Cosméticos</h3>
+              <div class="card-meta">
+                <span>Rebranding</span>
+                <span>2024</span>
+              </div>
+              <span class="arrow-link" aria-hidden="true">Ver projeto</span>
+            </div>
+          </a>
 
-    <footer>
-      <span class="footer-copy">
-        © 2026 Mateus Gomes. Belo Horizonte, Brasil.
-      </span>
-      <div class="footer-links">
-        <a href="https://www.behance.net/mateusgomesdsgn">Behance</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">↑ Topo</a>
+          <div class="product-card hover-target reveal reveal-d1" id="project-more">
+            <div class="product-card-image loader-card">
+              <div class="loader-wrapper">
+                <div class="loader"></div>
+                <span class="loader-text">Próximo projeto em breve...</span>
+              </div>
+            </div>
+            <div class="product-card-content skeleton-content">
+              <div class="skeleton-line skeleton-title"></div>
+              <div class="skeleton-meta">
+                <div class="skeleton-line skeleton-tag"></div>
+                <div class="skeleton-line skeleton-tag"></div>
+              </div>
+              <div class="skeleton-line skeleton-button"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Row 1: 3 cards 
+        <div class="products-grid layout-top">
+          <a href="#" class="product-card hover-target reveal" id="project-1">
+            <div class="product-card-image">
+              <img src="assets/img/thumbnails/balt-educa-thumb.jpg" alt="BaltEduca" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-content">
+              <h3 class="card-title">Balt Educa</h3>
+              <div class="card-meta">
+                <span>Identidade visual</span>
+                <span>2025</span>
+              </div>
+              <span class="arrow-link" aria-hidden="true">Ver projeto</span>
+            </div>
+          </a>
+
+          <a href="#" class="product-card hover-target reveal reveal-d1" id="project-2">
+            <div class="product-card-image">
+              <img src="assets/img/thumbnails/declatrack-thumb.jpg" alt="Declatrack" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-content">
+              <h3 class="card-title">Declatrack</h3>
+              <div class="card-meta">
+                <span>UI/UX Design & Design System</span>
+                <span>2024</span>
+              </div>
+              <span class="arrow-link" aria-hidden="true">Ver projeto</span>
+            </div>
+          </a>
+
+          <a href="#" class="product-card hover-target reveal reveal-d2" id="project-3">
+            <div class="product-card-image">
+              <img src="assets/img/thumbnails/ritu-thumb.jpg" alt="Ritu" loading="lazy" decoding="async">
+            </div>
+            <div class="product-card-content">
+              <h3 class="card-title">Ritu</h3>
+              <div class="card-meta">
+                <span>UI Design</span>
+                <span>2025</span>
+              </div>
+              <span class="arrow-link" aria-hidden="true">Ver projeto</span>
+            </div>
+          </a>
+        </div>-->
+
+
       </div>
-    </footer>
+    </section>
 
-    <script src="js/cursor.js" defer></script>
-    <script src="js/animations.js" defer></script>
-  </body>
+    <!-- ======================================================
+         ABOUT SECTION
+         ====================================================== -->
+    <section class="feature-section section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-main reveal">
+            <h2 class="heading-4">
+              <span>Sobre mim</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-image reveal">
+            <img src="assets/img/about/img_sobre-1.png" alt="Foto sobre mim" loading="lazy" decoding="async">
+          </div>
+
+          <div class="about-text">
+            <div class="feature-copy reveal">
+              <h3 class="heading-7 feature-title text-balance about-title">
+                Meu foco é transformar ideias em sistemas visuais claros, expressivos e memoráveis. Minha abordagem é
+                analítica mas flexível, combinando método com criatividade.
+              </h3>
+              <p class="feature-description about-desc">
+                Designer com mais de 5 anos de experiência desenvolvendo interfaces digitais, websites, identidades
+                visuais e experiências de marca.
+              </p>
+            </div>
+
+            <div class="feature-copy reveal reveal-d1">
+              <p class="feature-description about-desc about-desc-spaced">
+                Atuação em projetos de branding, UI Design, Web Design e comunicação digital, participando desde a
+                concepção estratégica até a execução visual.
+              </p>
+              <p class="caption text-variant about-caption">
+                Experiência colaborando com equipes multidisciplinares, liderando projetos de rebranding, criação de
+                websites, e-commerce, campanhas digitais e materiais institucionais para marcas nacionais e
+                internacionais.
+              </p>
+              <p class="caption text-variant about-caption about-caption-bold">
+                Domínio de Figma e Adobe Creative Suite, com conhecimentos em UX Strategy, HTML5, CSS3, JavaScript e
+                análise de dados aplicada à tomada de decisão.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         EXPERTISE SECTION
+         ====================================================== -->
+
+    <!-- background preto-->
+    <section class="expertise-section" id="expertise">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-main reveal">
+            <h2 class="heading-4 expertise-heading">Skills que motivam minha paixão</h2>
+          </div>
+          <p class="body-text text-variant reveal reveal-d1 expertise-subheading">Áreas de atuação e competências
+            técnicas.</p>
+        </div>
+
+        <div class="expertise-grid">
+
+          <!-- Card 1: UI/UX Design -->
+          <div class="expertise-card reveal" id="skill-uiux">
+            <div class="expertise-card-top">
+              <div class="expertise-icon figma-icon">
+                <svg width="24" height="36" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.75 21.5C5.821 21.5 7.5 19.821 7.5 17.75V14H3.75C1.679 14 0 15.679 0 17.75C0 19.821 1.679 21.5 3.75 21.5Z"
+                    fill="#0ACF83" />
+                  <path d="M0 10.75C0 8.679 1.679 7 3.75 7H7.5V14H3.75C1.679 14 0 12.821 0 10.75Z" fill="#A259FF" />
+                  <path d="M0 3.75C0 1.679 1.679 0 3.75 0H7.5V7H3.75C1.679 7 0 5.821 0 3.75Z" fill="#F24E1E" />
+                  <path d="M7.5 0H11.25C13.321 0 15 1.679 15 3.75C15 5.821 13.321 7 11.25 7H7.5V0Z" fill="#FF7262" />
+                  <path
+                    d="M15 10.75C15 12.821 13.321 14 11.25 14C9.179 14 7.5 12.821 7.5 10.75C7.5 8.679 9.179 7 11.25 7C13.321 7 15 8.679 15 10.75Z"
+                    fill="#1ABCFE" />
+                </svg>
+              </div>
+              <div class="expertise-tags">
+                <span class="expertise-tag">Wireframing</span>
+                <span class="expertise-tag">Prototipagem</span>
+                <span class="expertise-tag">Experiências intuitivas</span>
+              </div>
+            </div>
+            <h3 class="expertise-card-title">UI/UX Design</h3>
+            <p class="expertise-card-desc">Criação de experiências digitais que combinam design, tecnologia e
+              inteligência artificial para gerar mais engajamento e valor para o usuário.</p>
+          </div>
+
+          <!-- Card 2: Creative Development -->
+          <div class="expertise-card reveal reveal-d1" id="skill-dev">
+            <div class="expertise-card-top">
+              <div class="expertise-tags">
+                <span class="expertise-tag">JavaScript</span>
+                <span class="expertise-tag">HTML5</span>
+                <span class="expertise-tag">CSS3</span>
+                <span class="expertise-tag">AI</span>
+                <span class="expertise-tag">Automation</span>
+              </div>
+            </div>
+            <h3 class="expertise-card-title">Creative Developer</h3>
+            <p class="expertise-card-desc">Integro design, desenvolvimento front-end e inteligência artificial para
+              criar
+              experiências digitais modernas, escaláveis e preparadas para os novos comportamentos da web.</p>
+          </div>
+
+          <!-- Card 3: Design visual & Direção de arte -->
+          <div class="expertise-card reveal" id="skill-visual">
+            <div class="expertise-card-top">
+              <div class="expertise-adobe-icons">
+                <span class="adobe-badge adobe-ps">Ps</span>
+                <span class="adobe-badge adobe-ae">Ae</span>
+                <span class="adobe-badge adobe-ai">Ai</span>
+              </div>
+            </div>
+            <h3 class="expertise-card-title">Brand & Visual Design</h3>
+            <p class="expertise-card-desc">Desenvolvimento de identidades visuais, materiais gráficos e sistemas de
+              comunicação que mantêm consistência em todos os pontos de contato da marca.</p>
+          </div>
+
+          <!-- Card 4: Problems Slayer -->
+          <div class="expertise-card reveal reveal-d1" id="skill-problems">
+            <div class="expertise-card-top">
+              <div class="expertise-tags">
+                <span class="expertise-tag">Design Thinking</span>
+                <span class="expertise-tag">Resolução de problemas</span>
+                <span class="expertise-tag">Organização</span>
+                <span class="expertise-tag">Pensamento analítico e estratégico</span>
+              </div>
+            </div>
+            <h3 class="expertise-card-title">Problems Slayer</h3>
+            <p class="expertise-card-desc">Pensamento analítico, criatividade e visão estratégica para transformar
+              desafios complexos em soluções claras. Minha abordagem combina investigação, experimentação e foco em
+              resultados para gerar impacto real.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         CTA SECTION
+         ====================================================== -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="cta-backdrop"></div>
+          <div class="cta-content">
+            <h2 class="heading-3 cta-heading">O que vamos criar hoje?</h2>
+            <p class="body-text cta-sub">
+              Estou disponível para novos projetos. Se você tem uma ideia ou precisa de um designer, envie uma mensagem.
+            </p>
+            <div class="cta-actions">
+              <a href="mailto:falar.mateusgomes@gmail.com" class="button button-cta hover-target" id="cta-email">
+                <img class="avatar-cta" src="assets/img/avatars/avatar-site2.png" alt="Icone avatar" loading="lazy" decoding="async">
+                Olá,👋🏾 Mateus Gomes!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-nav-container">
+          <div class="footer-nav-section">
+            <span class="caption footer-label">Navegação</span>
+            <a href="#projects" class="footer-nav-link">Projetos</a>
+            <a href="#about" class="footer-nav-link">Sobre</a>
+            <a href="#expertise" class="footer-nav-link">Skills</a>
+          </div>
+          <div class="footer-nav-section">
+            <span class="caption footer-label">Contato</span>
+            <a href="mailto:falar.mateusgomes@gmail.com" class="footer-nav-link">falar.mateusgomes@gmail.com</a>
+          </div>
+          <div class="footer-nav-section">
+            <span class="caption footer-label">Social</span>
+            <a href="https://www.linkedin.com/in/mateusgomesdsgn/" class="footer-nav-link" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.behance.net/mateusgomesdsgn" class="footer-nav-link" target="_blank"
+              rel="noopener noreferrer">Behance</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="small text-variant">© 2024 MAGGO. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <span class="small text-variant">Belo Horizonte, Brasil</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+
 </html>
