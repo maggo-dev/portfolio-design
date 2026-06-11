@@ -1739,7 +1739,6 @@ ol {
 }
 
 /* --- Case Gallery ------------------------------------------ */
-/* Galeria 2 colunas , tamanho titulo e desrição fixo para não desalinhas as imagens*/
 .case-gallery {
   padding-block: var(--space-4xl);
 }
@@ -1775,6 +1774,15 @@ ol {
   color: var(--on-surface-variant);
   line-height: 1.5;
 }
+
+/* Galeria 3 colunas */
+.case-gallery-grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gutter);
+  margin-block: var(--space-4xl);
+}
+
 
 @media (max-width: 767px) {
   .case-gallery-2-col {
